@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var mylabel: UILabel!
+    @IBOutlet weak var labelCount: UILabel!
+    
+    var count = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        mylabel.text = "잘되네 히히!"
     }
-
+    @IBAction func btnAdd(_ sender: Any) {
+        labelCount.text = String(count)
+        count += 1;
+    }
+    
 
 }
 
